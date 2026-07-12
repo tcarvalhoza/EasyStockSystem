@@ -6,6 +6,19 @@ export interface SaleItemInput {
   quantity: number;
 }
 
+export interface SaleListResponse {
+  data: Sale[];
+  current_page: number;
+  last_page: number;
+  per_page: number;
+  total: number;
+}
+
+export const listSales = async (params: { per_page?: number; page?: number } = {}): Promise<SaleListResponse> => {
+  const { data } = await api.get<SaleListResponse>('/sales', { params });
+  return data;
+};
+
 export const createSale = async (items: SaleItemInput[]): Promise<Sale> => {
   const { data } = await api.post<Sale>('/sales', { items });
   return data;

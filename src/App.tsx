@@ -5,6 +5,7 @@ import { Login } from './pages/Login';
 import { Dashboard } from './pages/Dashboard';
 import { Products } from './pages/Products';
 import { Sales } from './pages/Sales';
+import { SalesHistory } from './pages/SalesHistory';
 
 function App() {
   return (
@@ -33,6 +34,14 @@ function App() {
             element={
               <PrivateRoute>
                 <Sales />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/sales/history"
+            element={
+              <PrivateRoute>
+                <SalesHistory />
               </PrivateRoute>
             }
           />
