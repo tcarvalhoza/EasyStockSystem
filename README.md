@@ -84,7 +84,7 @@ EasyStockSystem/
 │   ├── api/           # Cliente Axios e funções de API
 │   ├── components/    # Componentes reutilizáveis
 │   ├── contexts/      # AuthContext (login/logout/usuário)
-│   ├── pages/         # Login, Dashboard, Products, Sales
+│   ├── pages/         # Login, Dashboard, Products, Sales, SalesHistory
 │   ├── types/         # Interfaces TypeScript
 │   ├── App.tsx        # Rotas
 │   ├── main.tsx       # Entry point
@@ -114,3 +114,4 @@ EasyStockSystem/
 | `/` | Dashboard |
 | `/products` | Listagem e gestão de produtos |
 | `/sales` | Criação de vendas |
+| `/sales/history` | Histórico de vendas |
